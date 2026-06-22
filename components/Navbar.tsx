@@ -19,19 +19,15 @@ export default function Navbar() {
         className="
         max-w-[1600px]
         mx-auto
-        px-6 lg:px-10
-        flex
-        items-center
-        justify-between
+        px-4 md:px-6 lg:px-10
         h-20
-        py-2
         flex
         items-center
         justify-between
         "
       >
         {/* Logo + Nome */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 md:gap-4">
 
           <Image
             src="/logo.png"
@@ -39,17 +35,23 @@ export default function Navbar() {
             width={80}
             height={80}
             priority
+            style={{
+              width: "auto",
+              height: "60px",
+            }}
           />
 
           <div>
-            <h1 className="text-white text-lg font-black tracking-tight">
+            <h1 className="text-white text-base md:text-lg font-black tracking-tight">
               Seu Padilha
             </h1>
 
             <p
               className="
+              hidden sm:block
               text-amber-400
-              text-xs
+              text-[10px]
+              md:text-xs
               tracking-[3px]
               uppercase
               "
@@ -60,7 +62,7 @@ export default function Navbar() {
 
         </div>
 
-        {/* Navegação */}
+        {/* Navegação Desktop */}
         <nav className="hidden lg:flex items-center gap-8">
 
           <a
@@ -106,7 +108,7 @@ export default function Navbar() {
             transition
             "
           >
-            Atendimento 
+            Atendimento
           </a>
 
           <a
@@ -122,9 +124,11 @@ export default function Navbar() {
 
         </nav>
 
-        {/* WhatsApp */}
-        <button
+        {/* Botão Desktop */}
+        <a
+          href="#contato"
           className="
+          hidden md:flex
           bg-gradient-to-r
           from-amber-500
           to-orange-600
@@ -141,7 +145,27 @@ export default function Navbar() {
           "
         >
           Fale Conosco
-        </button>
+        </a>
+
+        {/* Botão Mobile */}
+        <a
+          href="#contato"
+          className="
+          md:hidden
+          bg-gradient-to-r
+          from-amber-500
+          to-orange-600
+          px-4
+          py-2
+          rounded-lg
+          text-white
+          text-sm
+          font-semibold
+          whitespace-nowrap
+          "
+        >
+          Contato
+        </a>
 
       </div>
     </header>
