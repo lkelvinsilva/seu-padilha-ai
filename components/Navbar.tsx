@@ -56,7 +56,7 @@ export default function Navbar() {
               font-serif
               "
             >
-              Seu Padilha
+              SEU PADILHA
             </h1>
 
             <p
@@ -71,7 +71,7 @@ export default function Navbar() {
               font-light
               "
             >
-              SABOR • FÉ • FAMÍLIA
+              Sabor • Fé • Família
             </p>
           </div>
 
