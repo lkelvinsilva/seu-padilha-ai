@@ -53,7 +53,7 @@ export default function Navbar() {
               md:text-2xl
               font-bold
               tracking-tight
-              font-serif
+              font-semibold
               "
             >
               SEU PADILHA
@@ -186,7 +186,7 @@ export default function Navbar() {
           rounded-xl
           text-white
           text-sm
-          font-semibold
+          font-serif
           shadow-lg
           shadow-orange-500/30
           whitespace-nowrap
