@@ -9,7 +9,7 @@ export default function Navbar() {
       left-0
       w-full
       z-50
-      bg-black/40
+      bg-black/50
       backdrop-blur-xl
       border-b
       border-amber-500/10
@@ -19,11 +19,15 @@ export default function Navbar() {
         className="
         max-w-[1600px]
         mx-auto
-        px-4 md:px-6 lg:px-10
-        h-20
+        px-4
+        md:px-6
+        lg:px-10
+        h-16
+        md:h-20
         flex
         items-center
         justify-between
+        relative
         "
       >
         {/* Logo + Nome */}
@@ -42,28 +46,39 @@ export default function Navbar() {
           />
 
           <div>
-            <h1 className="text-white text-base md:text-lg font-black tracking-tight">
+            <h1
+              className="
+              text-white
+              text-lg
+              md:text-2xl
+              font-bold
+              tracking-tight
+              font-serif
+              "
+            >
               Seu Padilha
             </h1>
 
             <p
               className="
-              hidden sm:block
-              text-amber-400
+              hidden
+              sm:block
+              text-amber-400/90
               text-[10px]
               md:text-xs
-              tracking-[3px]
+              tracking-[4px]
               uppercase
+              font-light
               "
             >
-              Sabor que acende memórias
+              SABOR • FÉ • FAMÍLIA
             </p>
           </div>
 
         </div>
 
         {/* Navegação Desktop */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
 
           <a
             href="#"
@@ -83,7 +98,8 @@ export default function Navbar() {
             className="
             text-white
             hover:text-amber-400
-            transition
+            transition-all
+            duration-300
             "
           >
             Cardápio
@@ -94,7 +110,8 @@ export default function Navbar() {
             className="
             text-white
             hover:text-amber-400
-            transition
+            transition-all
+            duration-300
             "
           >
             Galeria
@@ -105,10 +122,11 @@ export default function Navbar() {
             className="
             text-white
             hover:text-amber-400
-            transition
+            transition-all
+            duration-300
             "
           >
-            Atendimento
+            Atendimento IA
           </a>
 
           <a
@@ -116,7 +134,8 @@ export default function Navbar() {
             className="
             text-white
             hover:text-amber-400
-            transition
+            transition-all
+            duration-300
             "
           >
             Contato
@@ -128,16 +147,22 @@ export default function Navbar() {
         <a
           href="#contato"
           className="
-          hidden md:flex
+          hidden
+          md:flex
+          items-center
+          justify-center
           bg-gradient-to-r
-          from-amber-500
+          from-amber-400
+          via-orange-500
           to-orange-600
           px-8
           py-3
-          rounded-xl
+          rounded-2xl
           text-white
           font-semibold
-          shadow-lg
+          border
+          border-white/10
+          shadow-xl
           shadow-orange-500/30
           hover:scale-105
           transition-all
@@ -153,20 +178,37 @@ export default function Navbar() {
           className="
           md:hidden
           bg-gradient-to-r
-          from-amber-500
+          from-amber-400
+          via-orange-500
           to-orange-600
           px-4
           py-2
-          rounded-lg
+          rounded-xl
           text-white
           text-sm
           font-semibold
+          shadow-lg
+          shadow-orange-500/30
           whitespace-nowrap
           "
         >
           Contato
         </a>
 
+        {/* Linha dourada premium */}
+        <div
+          className="
+          absolute
+          bottom-0
+          left-0
+          w-full
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-amber-500
+          to-transparent
+          "
+        />
       </div>
     </header>
   );
